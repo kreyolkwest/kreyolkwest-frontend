@@ -11,6 +11,7 @@
       loop
       muted
       playsinline
+      crossorigin="anonymous"
     ></video>
   </div>
 </div>
