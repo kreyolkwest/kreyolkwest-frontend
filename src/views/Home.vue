@@ -146,7 +146,7 @@ nav.navbar {
   position: fixed;
   margin-top: 25px;
   z-index: 100;
-  margin-left: 100px;
+  margin-left: 60px;
   background-color: rgb(255, 255, 255);
   padding-top: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
