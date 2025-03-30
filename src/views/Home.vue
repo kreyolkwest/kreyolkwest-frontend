@@ -144,7 +144,7 @@ nav.navbar {
 
 .sticky-categories {
   position: fixed;
-  margin-top: 25px;
+  margin-top: 20px;
   z-index: 100;
   margin-left: 60px;
   margin-right: 90px;
