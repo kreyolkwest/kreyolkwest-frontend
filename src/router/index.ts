@@ -27,12 +27,12 @@ const routes = [
   {
     path: '/activites/:id',
     name: 'ActiviteDetail',
-    component: () => import('../views/activites.vue')
+    component: () => import('../views/Activites.vue')
   },
   {
     path: '/restaurants/:id',
     name: 'RestaurantDetail',
-    component: () => import('../views/restaurants.vue')
+    component: () => import('../views/Restaurants.vue')
   },
   {
     path: '/compte',
@@ -45,7 +45,7 @@ const routes = [
     {
       path: '/validation/:id',
       name: 'Validation',
-      component: () => import('../views/validation.vue'),
+      component: () => import('../views/Validation.vue'),
     }
 ];
 
