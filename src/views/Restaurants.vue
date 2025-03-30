@@ -110,7 +110,7 @@ const availableHours = computed(() => {
 onMounted(async () => {
   try {
     const id = route.params.id
-    const res = await api.get(`/api/restaurants/${id}`)
+    const res = await api.get(`${import.meta.env.VITE_API_URL}/api/restaurants/${id}`)
     restaurant.value = res.data
   } catch (err) {
     console.error('Erreur chargement restaurant', err)
