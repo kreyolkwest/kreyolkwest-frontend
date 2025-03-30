@@ -33,7 +33,7 @@
   const nbPersonnes = ref(0)
   
   onMounted(async () => {
-    const res = await api.get(`/reservations/${id}`)
+    const res = await api.get(`/api/reservations/${id}`)
     type.value = res.data.restaurant ? 'Restaurant' : 'Activité'
     nom.value = res.data.nomActivite
     date.value = res.data.date
@@ -42,12 +42,12 @@
   })
   
   const confirmerReservation = async () => {
-  await api.put(`/reservations/public/${id}/confirm`)
+  await api.put(`/api/reservations/public/${id}/confirm`)
   alert("Réservation confirmée !")
 }
 
 const refuserReservation = async () => {
-  await api.put(`/reservations/public/${id}/refuse`)
+  await api.put(`/api/reservations/public/${id}/refuse`)
   alert("Réservation refusée.")
 }
   </script>

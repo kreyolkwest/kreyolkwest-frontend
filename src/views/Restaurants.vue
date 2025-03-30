@@ -110,7 +110,7 @@ const availableHours = computed(() => {
 onMounted(async () => {
   try {
     const id = route.params.id
-    const res = await api.get(`/restaurants/${id}`)
+    const res = await api.get(`/api/restaurants/${id}`)
     restaurant.value = res.data
   } catch (err) {
     console.error('Erreur chargement restaurant', err)
@@ -122,7 +122,7 @@ const submitReservation = async () => {
     const token = localStorage.getItem('token')
     if (!token) return router.push('/connexion')
 
-    await api.post('/reservations', {
+    await api.post('/api/reservations', {
       date: date.value,
       horaire: horaire.value,
       nombrePersonnes: nbPersonnes.value,

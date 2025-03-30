@@ -118,10 +118,10 @@ const editingRestaurant = ref(null)
 
 const login = async () => {
   try {
-    const res = await api.post('/users/login', { identifiant: email.value, motDePasse: password.value })
+    const res = await api.post('/api/users/login', { identifiant: email.value, motDePasse: password.value })
     const token = res.data.token
     localStorage.setItem('token', token)
-    const profile = await api.get('/users/me', { headers: { Authorization: `Bearer ${token}` } })
+    const profile = await api.get('/api/users/me', { headers: { Authorization: `Bearer ${token}` } })
     if (profile.data.pro !== 'oui') {
       error.value = "Vous n'êtes pas autorisé."
       return
@@ -137,13 +137,13 @@ const login = async () => {
 const fetchData = async () => {
   const token = localStorage.getItem('token')
   const headers = { Authorization: `Bearer ${token}` }
-  const etabsRes = await api.get(`/etablissements/by-user/${user.value._id}`, { headers })
+  const etabsRes = await api.get(`/api/etablissements/by-user/${user.value._id}`, { headers })
   etablissements.value = etabsRes.data
   const etabIds = etabsRes.data.map(e => e._id).filter(id => !!id)
   if (etabIds.length) {
-    const resas = await api.get(`/reservations/by-etabs?ids=${etabIds.join(',')}`, { headers })
+    const resas = await api.get(`/api/reservations/by-etabs?ids=${etabIds.join(',')}`, { headers })
     reservations.value = resas.data
-    const restos = await api.get(`/restaurants/by-etabs?ids=${etabIds.join(',')}`, { headers })
+    const restos = await api.get(`/api/restaurants/by-etabs?ids=${etabIds.join(',')}`, { headers })
     restaurants.value = restos.data
   } else {
     reservations.value = []
@@ -168,7 +168,7 @@ const editRestaurant = (resto) => {
 const saveChanges = async () => {
   const token = localStorage.getItem('token')
   const headers = { Authorization: `Bearer ${token}` }
-  await api.put(`/etablissements/${editingItem.value._id}`, editingItem.value, { headers })
+  await api.put(`/api/etablissements/${editingItem.value._id}`, editingItem.value, { headers })
   await fetchData()
   editingItem.value = null
 }
@@ -176,14 +176,14 @@ const saveChanges = async () => {
 const saveRestaurantChanges = async () => {
   const token = localStorage.getItem('token')
   const headers = { Authorization: `Bearer ${token}` }
-  await api.put(`/restaurants/${editingRestaurant.value._id}`, editingRestaurant.value, { headers })
+  await api.put(`/api/restaurants/${editingRestaurant.value._id}`, editingRestaurant.value, { headers })
   await fetchData()
   editingRestaurant.value = null
 }
 
 const updateStatut = async (id, statut) => {
   const token = localStorage.getItem('token')
-  await api.put(`/reservations/${id}`, { statut }, { headers: { Authorization: `Bearer ${token}` } })
+  await api.put(`/api/reservations/${id}`, { statut }, { headers: { Authorization: `Bearer ${token}` } })
   await fetchData()
 }
 </script>

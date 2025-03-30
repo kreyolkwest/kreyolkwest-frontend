@@ -66,7 +66,7 @@
   
   const handleRegister = async () => {
     try {
-      await api.post('/users/register', {
+      await api.post('/api/users/register', {
         pseudo: pseudo.value,
         identifiant: identifiant.value,
         motDePasse: motDePasse.value,

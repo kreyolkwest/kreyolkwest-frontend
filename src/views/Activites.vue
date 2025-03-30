@@ -125,7 +125,7 @@ const availableHours = computed(() => {
 onMounted(async () => {
   try {
     const id = route.params.id
-    const res = await api.get(`/activities/${id}`)
+    const res = await api.get(`/api/activities/${id}`)
     activity.value = res.data
   } catch (err) {
     console.error('Erreur chargement activité', err)
@@ -151,7 +151,7 @@ const submitReservation = async () => {
     : activity.value.etablissement,
   statut: 'non confirmé'
 })
-    const res = await api.post('/reservations', {
+    const res = await api.post('/api/reservations', {
       date: date.value,
       horaire: horaire.value,
       nbPersonnes: nbPersonnes.value,

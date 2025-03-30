@@ -60,7 +60,7 @@
   
   const handleLogin = async () => {
     try {
-      const res = await api.post('/users/login', { identifiant: identifiant.value, motDePasse: motDePasse.value })
+      const res = await api.post('/api/users/login', { identifiant: identifiant.value, motDePasse: motDePasse.value })
       localStorage.setItem('token', res.data.token)
       router.push('/compte')
     } catch (err) {

@@ -119,7 +119,7 @@ const checkUserAndFetch = async () => {
     const token = localStorage.getItem('token')
     if (!token) return router.push('/connexion')
 
-    const userRes = await api.get('/users/me', {
+    const userRes = await api.get('/api/users/me', {
       headers: { Authorization: `Bearer ${token}` }
     })
 
@@ -127,7 +127,7 @@ const checkUserAndFetch = async () => {
       return router.push('/pro')
     }
 
-    const res = await api.get('/reservations/me', {
+    const res = await api.get('/api/reservations/me', {
       headers: { Authorization: `Bearer ${token}` }
     })
     reservations.value = res.data
@@ -155,7 +155,7 @@ const cancelReservation = async (id) => {
   if (confirm('Voulez-vous vraiment annuler cette réservation ?')) {
     try {
       const token = localStorage.getItem('token')
-      await api.delete(`/reservations/${id}`, {
+      await api.delete(`/api/reservations/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       })
       reservations.value = reservations.value.filter(res => res._id !== id)
@@ -180,7 +180,7 @@ const closeEditPopup = () => {
 const submitUpdate = async () => {
   try {
     const token = localStorage.getItem('token')
-    await api.put(`/reservations/${selectedReservation.value._id}`, {
+    await api.put(`/api/reservations/${selectedReservation.value._id}`, {
       date: newDate.value,
       horaire: newHoraire.value
     }, {

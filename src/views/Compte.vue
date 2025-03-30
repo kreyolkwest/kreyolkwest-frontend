@@ -93,7 +93,7 @@
       console.log('TOKEN:', token)
       if (!token) return router.push('/connexion')
   
-      const res = await api.get('/users/me', {
+      const res = await api.get('/api/users/me', {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -112,7 +112,7 @@
       if (!token) return router.push('/connexion')
   
       const res = await api.put(
-        `/users/${user.value._id}`,
+        `/api/users/${user.value._id}`,
         {
           pseudo: newPseudo.value,
           email: newEmail.value,
@@ -153,7 +153,7 @@
       const token = localStorage.getItem('token')
       if (!token) return router.push('/connexion')
   
-      await api.delete(`/users/${user.value._id}`, {
+      await api.delete(`/api/users/${user.value._id}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
