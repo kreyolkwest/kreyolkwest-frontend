@@ -2,7 +2,7 @@
   <div class="activlist-container">
     <div class="logo-wrapper">
   <router-link to="/" class="logo-link">
-    <img src="/src/icons/Logo_KreyolKwest.png" alt="KreyolKwest" class="logo-img" />
+    <img src="/icons/Logo_KreyolKwest.png" alt="KreyolKwest" class="logo-img" />
   </router-link>
 </div>
     <h2>Mes réservations</h2>
@@ -65,10 +65,10 @@
       <button class="contact-btn" @click="goTo('/contact')">Nous contacter</button>
       <div class="social-icons">
         <a href="https://www.instagram.com/kreyolkwest_martinique" target="_blank">
-          <img src="/src/icons/instagram.png" alt="Instagram" />
+          <img src="/icons/instagram.png" alt="Instagram" />
         </a>
         <a href="https://whatsapp.com/channel/0029VaFflWGGzzKLLltJi21U" target="_blank">
-          <img src="/src/icons/whatsapp.png" alt="WhatsApp" />
+          <img src="/icons/whatsapp.png" alt="WhatsApp" />
         </a>
       </div>
     </footer>
@@ -76,15 +76,15 @@
     <!-- ✅ Footer Mobile -->
     <footer class="bottom-nav mobile-only">
       <div class="nav-btn" @click="goTo('/')">
-        <img src="/src/icons/home.png" alt="Accueil" />
+        <img src="/icons/home.png" alt="Accueil" />
         <span>Découvrir</span>
       </div>
       <div class="nav-btn" @click="goTo('/reservations')">
-        <img src="/src/icons/calendar.png" alt="Activlist" />
+        <img src="/icons/calendar.png" alt="Activlist" />
         <span>My Activlist</span>
       </div>
       <div class="nav-btn" @click="goToCompte">
-        <img src="/src/icons/user.png" alt="Compte" />
+        <img src="/icons/user.png" alt="Compte" />
         <span>Mon compte</span>
       </div>
     </footer>
