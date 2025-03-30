@@ -112,7 +112,7 @@ const filtrerCategorie = (categorie) => {
 
 onMounted(async () => {
   try {
-    const resResto = await api.get('/restaurants')
+    const resResto = await api.get('/api/restaurants')
     const resAct = await api.get('/activities')
     restaurants.value = resResto.data
     activities.value = resAct.data
