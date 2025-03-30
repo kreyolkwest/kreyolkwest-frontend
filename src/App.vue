@@ -9,12 +9,12 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+//import { computed } from 'vue';
 import { useRoute } from 'vue-router';
 
 //import CategoriesBar from './components/CategoriesBar.vue';
 
-const route = useRoute();
+//const route = useRoute();
 //const _isHomePage = computed(() => route.path === '/');
 </script>
 
