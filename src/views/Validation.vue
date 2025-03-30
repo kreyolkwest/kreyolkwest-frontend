@@ -1,6 +1,6 @@
 <template>
     <div class="validation-page">
-      <img src="/src/icons/Logo_KreyolKwest.png" alt="Logo KreyolKwest" class="logo" />
+      <img src="/icons/Logo_KreyolKwest.png" alt="Logo KreyolKwest" class="logo" />
   
       <div class="card">
         <h2>Réservation reçue</h2>

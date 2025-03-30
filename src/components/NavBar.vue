@@ -13,7 +13,7 @@
           placeholder="Rechercher une activité ou un restaurant..."
         />
         <button @click="search">
-          <img src="/src/icons/search.png" alt="Rechercher" />
+          <img src="/icons/search.png" alt="Rechercher" />
         </button>
       </div>
     </div>
