@@ -32,21 +32,21 @@ import { ref, computed, onMounted, onUnmounted } from 'vue';
 const emit = defineEmits(['categorie-selectionnee'])
 
 const categories = [
-  { name: 'Restaurant', icon: '/src/icons/restaurant.png', route: '/restaurants', filter: 'restaurant' },
-  { name: 'Activité sur terre', icon: '/src/icons/activite_terre.png', route: '/activites', filter: 'terre' },
-  { name: 'Activité en mer', icon: '/src/icons/activite_mer.png', route: '/activites', filter: 'mer' },
-  { name: 'Bateau', icon: '/src/icons/bateau.png', route: '/activites', filter: 'bateau' },
-  { name: 'Buggy', icon: '/src/icons/buggy.png', route: '/activites', filter: 'buggy' },
-  { name: 'Cheval', icon: '/src/icons/cheval.png', route: '/activites', filter: 'cheval' },
-  { name: 'Jet Ski', icon: '/src/icons/jetski.png', route: '/activites', filter: 'jetski' },
-  { name: 'Kayak', icon: '/src/icons/kayak.png', route: '/activites', filter: 'kayak' },
-  { name: 'Parachute', icon: '/src/icons/parachute.png', route: '/activites', filter: 'parachute' },
-  { name: 'Avion', icon: '/src/icons/avion.png', route: '/activites', filter: 'avion' },
-  { name: 'Plongée', icon: '/src/icons/plongee.png', route: '/activites', filter: 'plongee' },
-  { name: 'Quad', icon: '/src/icons/quad.png', route: '/activites', filter: 'quad' },
-  { name: 'Randonnée', icon: '/src/icons/randonnee.png', route: '/activites', filter: 'randonnee' },
-  { name: 'Ski Nautique', icon: '/src/icons/ski-nautique.png', route: '/activites', filter: 'ski-nautique' },
-  { name: 'Tyrolienne', icon: '/src/icons/tyrolienne.png', route: '/activites', filter: 'tyrolienne' },
+  { name: 'Restaurant', icon: '/icons/restaurant.png', route: '/restaurants', filter: 'restaurant' },
+  { name: 'Activité sur terre', icon: '/icons/activite_terre.png', route: '/activites', filter: 'terre' },
+  { name: 'Activité en mer', icon: '/icons/activite_mer.png', route: '/activites', filter: 'mer' },
+  { name: 'Bateau', icon: '/icons/bateau.png', route: '/activites', filter: 'bateau' },
+  { name: 'Buggy', icon: '/icons/buggy.png', route: '/activites', filter: 'buggy' },
+  { name: 'Cheval', icon: '/icons/cheval.png', route: '/activites', filter: 'cheval' },
+  { name: 'Jet Ski', icon: '/icons/jetski.png', route: '/activites', filter: 'jetski' },
+  { name: 'Kayak', icon: '/icons/kayak.png', route: '/activites', filter: 'kayak' },
+  { name: 'Parachute', icon: '/icons/parachute.png', route: '/activites', filter: 'parachute' },
+  { name: 'Avion', icon: '/icons/avion.png', route: '/activites', filter: 'avion' },
+  { name: 'Plongée', icon: '/icons/plongee.png', route: '/activites', filter: 'plongee' },
+  { name: 'Quad', icon: '/icons/quad.png', route: '/activites', filter: 'quad' },
+  { name: 'Randonnée', icon: '/icons/randonnee.png', route: '/activites', filter: 'randonnee' },
+  { name: 'Ski Nautique', icon: '/icons/ski-nautique.png', route: '/activites', filter: 'ski-nautique' },
+  { name: 'Tyrolienne', icon: '/icons/tyrolienne.png', route: '/activites', filter: 'tyrolienne' },
 ];
 
 //const _router = useRouter();
