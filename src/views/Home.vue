@@ -251,15 +251,7 @@ nav.navbar {
   z-index: 1000;
   margin-left: -15px;
 }
-  .sticky-categories {
-  position: fixed;
-  margin-top: 5px;
-  z-index: 100;
-  margin-left: -10px;
-  background-color: rgb(255, 255, 255);
-  padding-top: 5px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
+  
 
   .bottom-nav {
     position: fixed;
