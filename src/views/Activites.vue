@@ -12,6 +12,8 @@
       muted
       playsinline
       crossorigin="anonymous"
+       type="video/mp4"
+       preload="none"
     ></video>
   </div>
 </div>
