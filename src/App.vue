@@ -15,7 +15,7 @@ import { useRoute } from 'vue-router';
 //import CategoriesBar from './components/CategoriesBar.vue';
 
 const route = useRoute();
-const isHomePage = computed(() => route.path === '/');
+const _isHomePage = computed(() => route.path === '/');
 </script>
 
 <style>
