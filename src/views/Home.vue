@@ -144,7 +144,7 @@ nav.navbar {
 
 .sticky-categories {
   position: fixed;
-  margin-top: -0px;
+  margin-top: 10px;
   z-index: 100;
   margin-left: -170px;
   background-color: rgb(255, 255, 255);
@@ -180,6 +180,7 @@ nav.navbar {
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 10px;
+  
 }
 
 .empty-message {
