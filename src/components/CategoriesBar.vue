@@ -49,7 +49,7 @@ const categories = [
   { name: 'Tyrolienne', icon: '/src/icons/tyrolienne.png', route: '/activites', filter: 'tyrolienne' },
 ];
 
-const _router = useRouter();
+//const _router = useRouter();
 const categoriesBar = ref<HTMLElement | null>(null);
 const selectedCategory = ref<string | null>(null);
 const scrollAmount = 200;
