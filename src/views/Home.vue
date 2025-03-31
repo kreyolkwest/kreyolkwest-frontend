@@ -142,7 +142,7 @@ nav.navbar {
   position: fixed;
   margin-top: 20px;
   z-index: 100;
-  
+  margin-left: 50px;
   background-color: rgb(255, 255, 255);
   padding-top: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
@@ -251,7 +251,7 @@ nav.navbar {
   position: fixed;
   margin-top: 20px;
   z-index: 100;
-  margin-left: 60px;
+  margin-left: 90px;
   margin-right: 90px;
   background-color: rgb(255, 255, 255);
   padding-top: 10px;
