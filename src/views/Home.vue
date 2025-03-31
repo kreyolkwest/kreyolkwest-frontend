@@ -3,7 +3,7 @@
     <NavBar />
     <h1 class="welcome-title"> </h1>
   
-    
+
     <!-- 🔥 Barre toujours visible -->
     <div class="sticky-categories">
       <CategoriesBar @categorie-selectionnee="filtrerCategorie" />
@@ -135,16 +135,16 @@ nav.navbar {
   position: fixed;
   top: 0;
   z-index: 1000;
-  margin-left: -180px;
+  margin-left: -160px;
 }
 
 .sticky-categories {
   position: fixed;
   margin-top: 20px;
   z-index: 100;
-  left: auto;
+  margin-left: -170px;
   background-color: rgb(255, 255, 255);
-  padding-top: 10px;
+  padding-top: 0px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
@@ -251,8 +251,8 @@ nav.navbar {
   position: fixed;
   margin-top: 20px;
   z-index: 100;
-  left: auto;
-  margin-right: 90px;
+  margin-left: -10px;
+  
   background-color: rgb(255, 255, 255);
   padding-top: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);

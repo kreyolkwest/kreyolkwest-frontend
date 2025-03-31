@@ -97,6 +97,7 @@ const selectCategory = (category: { route: string; filter: string }) => {
 <style scoped>
 .categories-bar-container {
   width: 100vw;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,7 +110,7 @@ const selectCategory = (category: { route: string; filter: string }) => {
 .categories-bar {
   display: flex;
   gap: 30px;
-  padding: 5px 150px;
+  padding: 0px 150px;
   overflow-x: hidden;
   scroll-behavior: smooth;
   white-space: nowrap;
@@ -124,6 +125,7 @@ const selectCategory = (category: { route: string; filter: string }) => {
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
   opacity: 0.5;
+  font-size: -0rem;
 }
 
 .category.active {
@@ -132,8 +134,8 @@ const selectCategory = (category: { route: string; filter: string }) => {
 }
 
 .category img {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
 }
 
 .category span {
@@ -151,7 +153,7 @@ const selectCategory = (category: { route: string; filter: string }) => {
   position: absolute;
   width: 20px;
   height: 20px;
-  border-radius: 70%;
+  border-radius: 30%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -165,11 +167,11 @@ const selectCategory = (category: { route: string; filter: string }) => {
 }
 
 .left {
-  left: 5px;
+  left: 10px;
 }
 
 .right {
-  right: 5px;
+  right: 10px;
 }
 
 .arrow:disabled {
