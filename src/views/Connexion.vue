@@ -9,6 +9,7 @@
         <input v-model="identifiant" type="text" placeholder="Identifiant" required />
         <input v-model="motDePasse" type="password" placeholder="Mot de passe" required />
         <button type="submit">Se connecter</button>
+        <p class="forgot-password" @click="showResetPopup = true">Mot de passe oublié ?</p>
       </form>
   
       <p class="switch">Pas encore de compte ?
@@ -45,6 +46,17 @@
       </div>
     </footer>
     </div>
+
+    <div class="popup-overlay" v-if="showResetPopup">
+  <div class="popup">
+    <h3>Réinitialiser votre mot de passe</h3>
+    <input v-model="resetEmail" type="email" placeholder="Votre adresse email" required />
+    <button @click="sendResetEmail">Envoyer le lien de réinitialisation</button>
+    <button class="cancel-btn" @click="showResetPopup = false">Annuler</button>
+    <p v-if="resetMessage" class="success">{{ resetMessage }}</p>
+    <p v-if="resetErreur" class="error">{{ resetErreur }}</p>
+  </div>
+</div>
   </template>
   
   <script setup>
@@ -67,6 +79,24 @@
       erreur.value = err.response?.data?.message || 'Erreur lors de la connexion.'
     }
   }
+
+
+  const showResetPopup = ref(false)
+const resetEmail = ref('')
+const resetMessage = ref('')
+const resetErreur = ref('')
+
+const sendResetEmail = async () => {
+  resetMessage.value = ''
+  resetErreur.value = ''
+  try {
+    await api.post('/api/users/reset-password-request', { email: resetEmail.value })
+    resetMessage.value = 'Un email de réinitialisation a été envoyé.'
+  } catch (err) {
+    resetErreur.value = err.response?.data?.message || 'Erreur lors de l’envoi.'
+  }
+}
+
   </script>
   
   <style scoped>
@@ -115,6 +145,52 @@
   .switch {
     margin-top: 15px;
   }
+
+
+
+  .forgot-password {
+  margin-top: 10px;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.popup {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+.popup input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.cancel-btn {
+  background-color: gray;
+  margin-left: 10px;
+}
+
+.success {
+  color: green;
+}
 
   /* ✅ Footer Desktop */
 .bottom-banner {

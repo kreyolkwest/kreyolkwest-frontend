@@ -46,6 +46,11 @@ const routes = [
       path: '/validation/:id',
       name: 'Validation',
       component: () => import('../views/Validation.vue'),
+    },
+    {
+      path: '/reset-password/:token',
+      name: 'ResetPassword',
+      component: () => import('../views/ResetPassword.vue')
     }
 ];
 
