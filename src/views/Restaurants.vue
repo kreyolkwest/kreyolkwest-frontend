@@ -122,6 +122,8 @@ const submitReservation = async () => {
     const token = localStorage.getItem('token')
     if (!token) return router.push('/connexion')
 
+    
+
     await api.post('/api/reservations', {
       date: date.value,
       horaire: horaire.value,
