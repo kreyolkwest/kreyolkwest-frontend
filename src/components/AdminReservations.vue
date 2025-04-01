@@ -31,9 +31,9 @@
         >
           <p><strong>Date :</strong> {{ res.date }}</p>
           <p><strong>Nombre de personnes :</strong> {{ res.nbPersonnes }}</p>
-          <p><strong>Type :</strong> {{ res.type }}</p>
-          <p><strong>ID élément :</strong> {{ res.elementId }}</p>
-          <p><strong>Nom :</strong> {{ res.nom }}</p>
+          <p><strong>Type :</strong> {{ res.etablissement }}</p>
+          <p><strong>ID élément :</strong> {{ res.activiteId }}</p>
+          <p><strong>Nom :</strong> {{ res.nomActivite }}</p>
         </div>
       </div>
     </div>
