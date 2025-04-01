@@ -34,7 +34,7 @@ onMounted(() => {
   const token = localStorage.getItem('token')
   const admin = localStorage.getItem('admin')
   if (!token || admin !== 'oui') {
-    router.push('/connexion')
+    //router.push('/connexion')
   }
 })
 
