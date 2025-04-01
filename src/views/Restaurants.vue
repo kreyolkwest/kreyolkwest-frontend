@@ -125,7 +125,7 @@ const submitReservation = async () => {
     await api.post('/api/reservations', {
       date: date.value,
       horaire: horaire.value,
-      nombrePersonnes: nbPersonnes.value,
+      nbPersonnes: nbPersonnes.value,
       nomActivite: restaurant.value.nom,
       restaurant: restaurant.value._id,
       etablissement: restaurant.value.etablissement,
