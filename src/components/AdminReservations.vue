@@ -31,7 +31,7 @@
         >
           <p><strong>Date :</strong> {{ res.date }}</p>
           <p><strong>Nombre de personnes :</strong> {{ res.nbPersonnes }}</p>
-          <p><strong>Type :</strong> {{ res.etablissement }}</p>
+          <p><strong>Type :</strong> {{ res.restaurant ? 'Restaurant' : 'Activité' }}</p>
           <p><strong>ID élément :</strong> {{ res.activiteId }}</p>
           <p><strong>Nom :</strong> {{ res.nomActivite }}</p>
         </div>
