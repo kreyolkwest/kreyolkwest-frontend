@@ -38,7 +38,7 @@
   
   <script setup>
   import { ref, watch, onMounted } from 'vue'
-  import api from '/../api/api'
+  import api from '/../api'
   
   const type = ref('')
   const form = ref({ nom: '', description: '', telephone: '', horaires: '', capacite: '', images: '', videos: '' })
