@@ -41,7 +41,7 @@
   
   <script setup>
   import { ref, computed, onMounted } from 'vue'
-  import api from '/../api/api'
+  import api from '../../api/api'
   
   const reservations = ref([])
   const filtre = ref({ type: '', id: '' })
