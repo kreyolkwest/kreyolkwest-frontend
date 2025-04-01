@@ -28,7 +28,7 @@
         </p>
             <p><strong>Date :</strong> {{ formatDate(res.date) }}</p>
             <p><strong>Heure :</strong> {{ res.horaire }}</p>
-            <p><strong>Nombre de personnes :</strong> {{ res.nbPersonnes }}</p>
+            <p><strong>Nombre de personnes :</strong> {{ res.nbPersonnes.toString() }}</p>
             <p><strong>Établissement :</strong> {{ res.etablissement?.nom || '-' }}</p>
             <p><strong>Statut :</strong> {{ res.statut }}</p>
 
