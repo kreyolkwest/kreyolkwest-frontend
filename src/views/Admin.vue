@@ -23,8 +23,8 @@
   
   <script setup>
   import { ref } from 'vue'
-  import AdminReservations from '../components/admin/AdminReservations.vue'
-  import AdminGestion from '../components/admin/AdminGestion.vue'
+  import AdminReservations from '../components/AdminReservations.vue'
+  import AdminGestion from '../components/AdminGestion.vue'
   import { onMounted } from 'vue'
   import { useRouter } from 'vue-router'
 
