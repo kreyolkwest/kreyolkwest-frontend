@@ -71,14 +71,24 @@
   const goTo = (r) => router.push(r)
   
   const handleLogin = async () => {
-    try {
-      const res = await api.post('/api/users/login', { identifiant: identifiant.value, motDePasse: motDePasse.value })
-      localStorage.setItem('token', res.data.token)
-      router.push('/compte')
-    } catch (err) {
-      erreur.value = err.response?.data?.message || 'Erreur lors de la connexion.'
+  try {
+    const res = await api.post('/api/users/login', {
+      identifiant: identifiant.value,
+      motDePasse: motDePasse.value,
+    })
+
+    localStorage.setItem('token', res.data.token)
+    localStorage.setItem('admin', res.data.admin) // ← important
+
+    if (res.data.admin === 'oui') {
+      router.push('/admin') // 🎯 Redirection admin
+    } else {
+      router.push('/compte') // ✅ Redirection normale
     }
+  } catch (err) {
+    erreur.value = err.response?.data?.message || 'Erreur lors de la connexion.'
   }
+}
 
 
   const showResetPopup = ref(false)
