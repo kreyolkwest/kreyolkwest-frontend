@@ -6,6 +6,7 @@
     </router-link>
       <h2>Mon compte</h2>
       <p><strong>Pseudo :</strong> {{ user.pseudo }}</p>
+      <p><strong>admin :</strong> {{ user.admin }}</p>
       <p><strong>Email :</strong> {{ user.email }}</p>
       <p><strong>Téléphone :</strong> {{ user.telephone }}</p>
       <p><strong>Identifiant :</strong> {{ user.identifiant }}</p>
