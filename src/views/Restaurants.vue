@@ -127,7 +127,7 @@ const submitReservation = async () => {
     await api.post('/api/reservations', {
       date: date.value,
       horaire: horaire.value,
-      nbPersonnes: nbPersonnes.value,
+      nbPersonnes: nbPersonnes,
       nomActivite: restaurant.value.nom,
       restaurant: restaurant.value._id,
       etablissement: restaurant.value.etablissement,
@@ -143,6 +143,7 @@ const submitReservation = async () => {
     erreur.value = err.response?.data?.message || 'Erreur lors de la réservation.'
     message.value = ''
   }
+  goTo('/reservations')
 }
 </script>
 
