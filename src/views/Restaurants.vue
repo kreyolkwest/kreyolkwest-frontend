@@ -3,7 +3,7 @@
     <NavBar />
 
     <div class="medias">
-      <div v-for="(media, i) in activity.medias" :key="i" class="media-wrapper">
+      <div v-for="(media, i) in restaurant.medias" :key="i" class="media-wrapper">
        <img v-if="media.type === 'image'" :src="media.url" alt="restaurant" />
        <video
          v-else-if="media.type === 'video'"
