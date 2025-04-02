@@ -50,6 +50,7 @@
           <p><strong>Activité :</strong> {{ res.nomActivite }}</p>
           <p><strong>Date :</strong> {{ res.date }}</p>
           <p><strong>Heure :</strong> {{ res.horaire }}</p>
+          <p><strong>Téléphone client :</strong>{{ res.user.telephone }} </p>
           <p><strong>Statut :</strong> {{ res.statut }}</p>
           <div class="btns">
             <button @click="updateStatut(res._id, 'oui confirmé')">Confirmer</button>

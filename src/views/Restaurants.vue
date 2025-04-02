@@ -1,8 +1,22 @@
 <template>
   <div class="restaurant-detail" v-if="restaurant">
     <NavBar />
-    <div class="images">
-      <img v-for="(img, i) in restaurant.images" :key="i" :src="img" alt="restaurant" />
+
+    <div class="medias">
+      <div v-for="(media, i) in activity.medias" :key="i" class="media-wrapper">
+       <img v-if="media.type === 'image'" :src="media.url" alt="restaurant" />
+       <video
+         v-else-if="media.type === 'video'"
+         :src="media.url"
+         autoplay
+         loop
+         muted
+         playsinline
+         crossorigin="anonymous"
+         type="video/mp4"
+         preload="none"
+       ></video>
+      </div>
     </div>
 
     <h2>{{ restaurant.nom }}</h2>

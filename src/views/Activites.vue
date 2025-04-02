@@ -2,21 +2,21 @@
   <div class="activity-detail" v-if="activity">
     <NavBar />
     <div class="medias">
-  <div v-for="(media, i) in activity.medias" :key="i" class="media-wrapper">
-    <img v-if="media.type === 'image'" :src="media.url" alt="activité" />
-    <video
-      v-else-if="media.type === 'video'"
-      :src="media.url"
-      autoplay
-      loop
-      muted
-      playsinline
-      crossorigin="anonymous"
-       type="video/mp4"
-       preload="none"
-    ></video>
-  </div>
-</div>
+      <div v-for="(media, i) in activity.medias" :key="i" class="media-wrapper">
+       <img v-if="media.type === 'image'" :src="media.url" alt="activité" />
+       <video
+         v-else-if="media.type === 'video'"
+         :src="media.url"
+         autoplay
+         loop
+         muted
+         playsinline
+         crossorigin="anonymous"
+         type="video/mp4"
+         preload="none"
+       ></video>
+      </div>
+    </div>
 
     <h2>{{ activity.nom }}</h2>
     <p><strong>Présentation :</strong> {{ activity.presentation }}</p>
@@ -42,9 +42,9 @@
         <input
           type="number"
           v-model="nbPersonnes"
-          :max="activity.limiteNombrePers"
+          :max="activity.limitePersonnes"
           min="1"
-          :placeholder="`Nombre de personnes (max ${activity.limiteNombrePers})`"
+          :placeholder="`Nombre de personnes (max ${activity.limitePersonnes})`"
         />
 
         <div class="popup-actions">
