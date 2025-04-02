@@ -170,17 +170,22 @@ const submitReservation = async () => {
   text-align: left;
 }
 
-.images {
+.medias {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
-
-.images img {
+.media-wrapper {
   width: 100%;
   max-width: 300px;
-  border-radius: 8px;
 }
+.media-wrapper img,
+.media-wrapper video {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
 
 button {
   margin-top: 20px;
