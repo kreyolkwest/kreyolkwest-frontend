@@ -165,6 +165,15 @@ const submitReservation = async () => {
 
 <style scoped>
 
+/* Fixe la navbar */
+nav.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  margin-left: -160px;
+}
+
+
 .activity-detail {
   max-width: 800px;
   margin: auto;

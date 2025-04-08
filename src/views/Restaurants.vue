@@ -148,6 +148,14 @@ const submitReservation = async () => {
 
 <style scoped>
 
+/* Fixe la navbar */
+nav.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  margin-left: -160px;
+}
+
 .restaurant-detail img {
   width: 100%;
   height: 200px;
