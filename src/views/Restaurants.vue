@@ -2,22 +2,6 @@
   <div class="restaurant-detail" v-if="restaurant">
     <NavBar />
     <img :src="restaurant.images[0]" :alt="restaurant.nom" v-if="restaurant.images?.length" />
-    <div class="medias">
-      <div v-for="(media, i) in restaurant.medias" :key="i" class="media-wrapper">
-       <img v-if="media.type === 'image'" :src="media.url" alt="restaurant" />
-       <video
-         v-else-if="media.type === 'video'"
-         :src="media.url"
-         autoplay
-         loop
-         muted
-         playsinline
-         crossorigin="anonymous"
-         type="video/mp4"
-         preload="none"
-       ></video>
-      </div>
-    </div>
 
     <h2>{{ restaurant.nom }}</h2>
     <p><strong>Présentation :</strong> {{ restaurant.presentation }}</p>
@@ -170,6 +154,7 @@ const submitReservation = async () => {
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 10px;
+  margin-top: 10px;
   
 }
 .restaurant-detail {
@@ -179,21 +164,7 @@ const submitReservation = async () => {
   text-align: left;
 }
 
-.medias {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.media-wrapper {
-  width: 100%;
-  max-width: 300px;
-}
-.media-wrapper img,
-.media-wrapper video {
-  width: 100%;
-  border-radius: 8px;
-  object-fit: cover;
-}
+
 
 
 button {
