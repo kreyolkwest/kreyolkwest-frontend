@@ -164,7 +164,7 @@ const submitReservation = async () => {
 
 <style scoped>
 
-.img {
+.restaurant-detail img {
   width: 100%;
   height: 200px;
   object-fit: cover;
