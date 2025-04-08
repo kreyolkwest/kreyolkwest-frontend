@@ -1,7 +1,7 @@
 <template>
   <div class="restaurant-detail" v-if="restaurant">
     <NavBar />
-
+    <img :src="restaurant.images[0]" :alt="restaurant.nom" v-if="item.restaurant?.length" />
     <div class="medias">
       <div v-for="(media, i) in restaurant.medias" :key="i" class="media-wrapper">
        <img v-if="media.type === 'image'" :src="media.url" alt="restaurant" />
