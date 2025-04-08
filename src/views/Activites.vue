@@ -170,7 +170,7 @@ nav.navbar {
   position: fixed;
   top: 0;
   z-index: 1000;
-  margin-left: -380px;
+  margin-left: -350px;
 }
 
 
