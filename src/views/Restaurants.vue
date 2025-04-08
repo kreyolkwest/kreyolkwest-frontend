@@ -153,7 +153,7 @@ nav.navbar {
   position: fixed;
   top: 0;
   z-index: 1000;
-  margin-left: -160px;
+  margin-left: -330px;
 }
 
 .restaurant-detail img {
