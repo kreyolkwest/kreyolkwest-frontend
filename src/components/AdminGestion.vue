@@ -52,10 +52,19 @@ const form = ref({
 })
 const liste = ref([])
 
+const endpointMap = {
+  activite: 'activities',
+  restaurant: 'restaurants',
+  etablissement: 'etablissements'
+}
+
 const chargerListe = async () => {
   if (!type.value) return
+  const endpoint = endpointMap[type.value]
+  if (!endpoint) return
+
   try {
-    const res = await api.get(`/api/${type.value}s`)
+    const res = await api.get(`/api/${endpoint}`)
     liste.value = res.data
   } catch (err) {
     console.error('Erreur lors du chargement', err)
