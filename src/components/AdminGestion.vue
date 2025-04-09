@@ -55,7 +55,7 @@ const liste = ref([])
 const chargerListe = async () => {
   if (!type.value) return
   try {
-    const res = await api.get(`/api/${type.value}`)
+    const res = await api.get(`/api/${type.value}s`)
     liste.value = res.data
   } catch (err) {
     console.error('Erreur lors du chargement', err)
