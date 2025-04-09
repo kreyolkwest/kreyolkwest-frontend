@@ -77,6 +77,9 @@ watch(type, () => {
 
 const submitForm = async () => {
   try {
+    const endpoint = endpointMap[type.value]
+    if (!endpoint) return alert("Type invalide")
+
     const images = form.value.imagesInput.split(',').map(url => url.trim()).filter(Boolean)
     const videos = form.value.videosInput.split(',').map(url => url.trim()).filter(Boolean)
 
@@ -94,7 +97,7 @@ const submitForm = async () => {
       medias
     }
 
-    await api.post(`/api/${type.value}s`, payload)
+    await api.post(`/api/${endpoint}`, payload)
 
     alert(`${type.value} ajouté avec succès !`)
     form.value = {
