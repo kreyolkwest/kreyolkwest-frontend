@@ -58,4 +58,32 @@ html, body {
   }
 
 }
+
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+
+  input, textarea, select, button {
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid #ccc;
+  }
+
+  .popup,
+  .popup input,
+  .popup select {
+    background-color: white !important;
+    color: black !important;
+  }
+
+  .tab-content,
+  .auth-container,
+  .gestion-card {
+    background-color: white !important;
+    color: black !important;
+  }
+}
 </style>
