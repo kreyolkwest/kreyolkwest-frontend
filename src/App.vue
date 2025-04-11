@@ -68,7 +68,7 @@ html, body {
 
   input, textarea, select, button {
     background-color: white !important;
-    color: black !important;
+    color: rgb(62, 60, 60) !important;
     border: 1px solid #ccc;
   }
 
