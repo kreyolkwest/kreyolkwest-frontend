@@ -316,12 +316,12 @@ body {
 @media (prefers-color-scheme: dark) {
   body {
     background-color: rgb(255, 181, 120);
-    color: #f5f5f5;
+    color: rgb(255, 181, 120);
   }
 
   .card {
-    background-color: #222;
-    color: #f5f5f5;
+    background-color: rgb(255, 181, 120);
+    color: rgb(255, 181, 120);
   }
 
   .bottom-banner, .bottom-nav {

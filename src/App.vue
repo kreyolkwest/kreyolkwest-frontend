@@ -67,22 +67,22 @@ html, body {
   }
 
   input, textarea, select, button {
-    background-color: white !important;
-    color: rgb(62, 60, 60) !important;
+    background-color: rgb(227, 194, 121) !important;
+    color: rgb(255, 181, 120) !important;
     border: 1px solid #ccc;
   }
 
   .popup,
   .popup input,
   .popup select {
-    background-color: white !important;
+    background-color: rgb(255, 181, 120) !important;
     color: black !important;
   }
 
   .tab-content,
   .auth-container,
   .gestion-card {
-    background-color: white !important;
+    background-color: rgb(255, 181, 120) !important;
     color: black !important;
   }
 }
