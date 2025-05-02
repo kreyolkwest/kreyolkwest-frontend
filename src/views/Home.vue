@@ -305,7 +305,7 @@ nav.navbar {
 }
 
 :root {
-  --fond-creme: #fffaf3;
+  --fond-creme: #eac898;
 }
 
 body {
