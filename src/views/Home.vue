@@ -71,7 +71,7 @@ import NavBar from '../components/NavBar.vue';
 import CategoriesBar from '../components/CategoriesBar.vue'
 import api from '../api/api'
 import { isAuthenticated } from '../utils/auth.js'
-import heroImage from '@/assets/hero-martinique.png'
+import heroImage from '../assets/hero-martinique.png'
 
 const router = useRouter()
 const route = useRoute()
