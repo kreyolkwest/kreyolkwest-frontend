@@ -2,6 +2,10 @@
   <div class="home">
     <NavBar />
     <h1 class="welcome-title"> </h1>
+    <!-- 🔥 Barre toujours visible -->
+    <div class="sticky-categories">
+      <CategoriesBar @categorie-selectionnee="filtrerCategorie" />
+    </div>
   <!-- Section hero visible au chargement -->
 <div class="hero-section">
   <img class="hero-bg" :src="heroImage" alt="Martinique">
@@ -14,10 +18,7 @@
   </div>
 </div>
 
-    <!-- 🔥 Barre toujours visible -->
-    <div class="sticky-categories">
-      <CategoriesBar @categorie-selectionnee="filtrerCategorie" />
-    </div>
+    
 
     <div v-if="filteredContent.length" class="content-grid">
       <div
@@ -343,7 +344,8 @@ body {
 .hero-bg {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: auto;
+  display: block;
   object-fit: cover;
   top: 0;
   left: 0;
