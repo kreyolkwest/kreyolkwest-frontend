@@ -4,7 +4,7 @@
     <h1 class="welcome-title"> </h1>
   <!-- Section hero visible au chargement -->
 <div class="hero-section">
-  <img class="hero-bg" src="/assets/hero-martinique.png" alt="Martinique">
+  <img class="hero-bg" src="@/assets/hero-martinique.png" alt="Martinique">
   <div class="hero-content">
     <h1 class="hero-title">Découvrez la Martinique</h1>
     <div class="search-bar">
