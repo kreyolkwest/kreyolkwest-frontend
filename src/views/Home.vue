@@ -305,7 +305,7 @@ nav.navbar {
 }
 
 :root {
-  --fond-creme: #f0b665;
+  --fond-creme: rgb(255, 181, 120);
 }
 
 body {
@@ -315,7 +315,7 @@ body {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #111;
+    background-color: rgb(255, 181, 120);
     color: #f5f5f5;
   }
 

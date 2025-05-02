@@ -62,7 +62,7 @@ html, body {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: white !important;
+    background-color: rgb(255, 181, 120) !important;
     color: black !important;
   }
 
