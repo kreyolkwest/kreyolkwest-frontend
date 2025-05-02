@@ -2,7 +2,17 @@
   <div class="home">
     <NavBar />
     <h1 class="welcome-title"> </h1>
-  
+  <!-- Section hero visible au chargement -->
+<div class="hero-section">
+  <img class="hero-bg" src="/assets/hero-martinique.png" alt="Martinique">
+  <div class="hero-content">
+    <h1 class="hero-title">Découvrez la Martinique</h1>
+    <div class="search-bar">
+      <input type="text" placeholder="Rechercher des restaurants..." />
+      <button>Rechercher</button>
+    </div>
+  </div>
+</div>
 
     <!-- 🔥 Barre toujours visible -->
     <div class="sticky-categories">
@@ -290,5 +300,86 @@ nav.navbar {
   .nav-btn span {
     font-size: 12px;
   }
+}
+
+:root {
+  --fond-creme: #fffaf3;
+}
+
+body {
+  background-color: var(--fond-creme);
+  color: #111;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #111;
+    color: #f5f5f5;
+  }
+
+  .card {
+    background-color: #222;
+    color: #f5f5f5;
+  }
+
+  .bottom-banner, .bottom-nav {
+    background: #000;
+    color: white;
+  }
+
+  input, button {
+    color: black !important;
+  }
+}
+
+.hero-section {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  color: white;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.search-bar {
+  margin-top: 20px;
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 300px;
+  border-radius: 8px;
+  border: none;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  background: orange;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
 }
 </style>
