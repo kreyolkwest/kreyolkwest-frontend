@@ -305,12 +305,12 @@ nav.navbar {
 }
 
 :root {
-  --fond-creme: #eac898;
+  --fond-creme: #f0b665;
 }
 
 body {
   background-color: var(--fond-creme);
-  color: #111;
+  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -344,7 +344,7 @@ body {
 .hero-bg {
   position: absolute;
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   object-fit: cover;
   top: 0;
