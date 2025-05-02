@@ -32,8 +32,9 @@
         />
 
         <div class="popup-actions">
-          <button @click="submitReservation">Valider</button>
           <button @click="showPopup = false">Annuler</button>
+          <button @click="submitReservation">Valider</button>
+          
         </div>
 
         <p v-if="message" class="success">{{ message }}</p>
