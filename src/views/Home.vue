@@ -305,7 +305,7 @@ nav.navbar {
 }
 
 :root {
-  --fond-creme: rgb(155, 107, 68);
+  --fond-creme: rgb(241, 206, 178);
 }
 
 body {
