@@ -305,7 +305,7 @@ nav.navbar {
 }
 
 :root {
-  --fond-creme: rgb(255, 181, 120);
+  --fond-creme: rgb(155, 107, 68);
 }
 
 body {
@@ -315,13 +315,13 @@ body {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: rgb(255, 181, 120);
-    color: rgb(255, 181, 120);
+    background-color: rgb(210, 145, 75);
+    color: rgb(255, 251, 251);
   }
 
   .card {
     background-color: rgb(255, 181, 120);
-    color: rgb(255, 181, 120);
+    color: rgb(255, 255, 255);
   }
 
   .bottom-banner, .bottom-nav {
@@ -380,7 +380,7 @@ body {
   padding: 10px 20px;
   margin-left: 10px;
   border: none;
-  background: orange;
+  background: rgb(255, 255, 255);
   border-radius: 8px;
   color: white;
   cursor: pointer;
