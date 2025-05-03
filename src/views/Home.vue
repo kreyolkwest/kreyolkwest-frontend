@@ -343,7 +343,7 @@ body {
 
 .hero-bg {
   position: absolute;
-  width: 100%;
+  width: 130%;
   height: 100%;
   display: block;
   object-fit: cover;

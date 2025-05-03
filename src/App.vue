@@ -25,6 +25,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0;
+  background-color:rgb(210, 145, 75);
 }
 
 /* Empêche le scroll horizontal */
