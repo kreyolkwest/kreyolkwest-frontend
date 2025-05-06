@@ -4,7 +4,7 @@ import Connexion from '../views/Connexion.vue';
 import Inscription from '../views/Inscription.vue';
 
 const routes = [
-  { path: '/', component: Home },
+  { path: '/home', component: Home },
   { path: '/restaurants', component: () => import('../views/Restaurants.vue') },
   { path: '/activites', component: () => import('../views/Activites.vue') },
   { path: '/contact', component: () => import('../views/Contact.vue') },
