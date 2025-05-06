@@ -56,6 +56,11 @@ const routes = [
       path: '/admin',
       name: 'Admin',
       component: () => import('../views/Admin.vue')
+    }, 
+    {
+      path: '/',
+      name: 'EnConstruction',
+      component: () => import('../views/EnConstruction.vue')
     }
 ];
 
