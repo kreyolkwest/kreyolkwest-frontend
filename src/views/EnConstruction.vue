@@ -1,6 +1,6 @@
 <template>
     <div class="construction-page">
-      <img src="/icons/Logo_KreyolKwest.png" alt="Logo KreyolKwest" class="logo" />
+      <img src="/icons/kreyolkwest_logo_sans texte_aventure_martiniquaise.png" alt="Logo KreyolKwest" class="logo" />
       <h1>🚧 Site en construction</h1>
       <p>Nous préparons quelque chose d’incroyable pour vous en Martinique…</p>
       <p>Revenez très bientôt !</p>
