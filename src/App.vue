@@ -25,7 +25,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0;
-  background-color:rgb(210, 145, 75);
+  background-color:rgb(255, 218, 179);
 }
 
 /* Empêche le scroll horizontal */
@@ -63,27 +63,27 @@ html, body {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: rgb(255, 181, 120) !important;
+    background-color: rgb(255, 224, 199) !important;
     color: black !important;
   }
 
   input, textarea, select, button {
     background-color: rgb(227, 194, 121) !important;
-    color: rgb(255, 181, 120) !important;
+    color: rgb(255, 218, 179) !important;
     border: 1px solid #ccc;
   }
 
   .popup,
   .popup input,
   .popup select {
-    background-color: rgb(255, 181, 120) !important;
+    background-color: rgb(255, 218, 179)!important;
     color: black !important;
   }
 
   .tab-content,
   .auth-container,
   .gestion-card {
-    background-color: rgb(255, 181, 120) !important;
+    background-color: rgb(255, 218, 179) !important;
     color: black !important;
   }
 }
