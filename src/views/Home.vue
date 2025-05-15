@@ -12,8 +12,13 @@
   <div class="hero-content">
     <h1 class="hero-title">Découvrez la Martinique</h1>
     <div class="search-bar">
-      <input type="text" placeholder="Rechercher des restaurants..." />
-      <button>Rechercher</button>
+      <input 
+      type="text" 
+      v-model="searchQuery"
+      placeholder="Rechercher des restaurants, activités,..." 
+      @input="handleSearch"
+      />
+      <button @click="handleSearch">Rechercher</button>
     </div>
   </div>
 </div>
@@ -80,6 +85,7 @@ const route = useRoute()
 const restaurants = ref([])
 const activities = ref([])
 const selectedCategory = ref(null)
+const searchQuery = ref('')
 
 const goTo = (r) => router.push(r)
 
@@ -102,10 +108,39 @@ const mixedContent = computed(() => {
 })
 
 const filteredContent = computed(() => {
-  if (!selectedCategory.value) return mixedContent.value
-  if (selectedCategory.value === 'restaurant') return restaurants.value
-  return activities.value.filter(a => a.typesActivite?.includes(selectedCategory.value))
+  // First, get the base results based on category
+  let results = selectedCategory.value === 'restaurant' 
+    ? restaurants.value
+    : selectedCategory.value === null 
+    ? mixedContent.value
+    : activities.value.filter(a => a.typesActivite?.includes(selectedCategory.value))
+
+  // Then apply search filter if there's a search query
+  if (searchQuery.value.trim()) {
+    const query = searchQuery.value.toLowerCase().trim()
+    results = results.filter(item => {
+      const searchableFields = [
+        item.nom,
+        item.description,
+        item.adresse,
+        ...(item.typesActivite || []),
+        ...(item.specialites || [])
+      ]
+      
+      return searchableFields.some(field => 
+        field?.toLowerCase().includes(query)
+      )
+    })
+  }
+
+  return results
 })
+
+const handleSearch = () => {
+  console.log('Recherche en cours:', searchQuery.value)
+  // La recherche est déjà gérée par le computed property
+}
+
 
 const handleCardClick = (item) => {
   const isRestaurant = restaurants.value.find(r => r._id === item._id)
@@ -164,7 +199,7 @@ nav.navbar {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
-  margin-top: 180px;
+  margin-top: 80px;
   padding: 0 20px;
 }
 
@@ -261,12 +296,11 @@ nav.navbar {
 }
 .sticky-categories {
   position: fixed;
-  margin-top: 20px;
+  margin-top: 5%;
   z-index: 100;
   margin-left: -10px;
-  
   background-color: rgb(255, 255, 255);
-  padding-top: 10px;
+  padding-top: 5px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
   
@@ -302,6 +336,31 @@ nav.navbar {
   .nav-btn span {
     font-size: 12px;
   }
+
+  .search-bar {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .search-bar input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .search-bar button {
+    width: 50%;
+    max-width: 300px;
+    margin-left: 0;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    margin-bottom: -25px;
+  }
+
+
 }
 
 :root {
@@ -336,15 +395,16 @@ body {
 
 .hero-section {
   position: relative;
-  height: 400px;
+  height: 300px;
   width: 100%;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .hero-bg {
   position: absolute;
-  width: 130%;
-  height: 100%;
+  width: 100%;
+  height: 80%;
   display: block;
   object-fit: cover;
   top: 0;
@@ -354,7 +414,7 @@ body {
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   text-align: center;
   margin-top: 100px;
 }
@@ -373,16 +433,23 @@ body {
   padding: 10px;
   width: 300px;
   border-radius: 8px;
-  border: none;
+  border: 1px solid #ccc;
+  font-size: 16px;
 }
 
 .search-bar button {
   padding: 10px 20px;
   margin-left: 10px;
   border: none;
-  background: rgb(255, 255, 255);
+  background: #007bff;
   border-radius: 8px;
   color: white;
   cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+.search-bar button:hover {
+  background: #0056b3;
 }
 </style>

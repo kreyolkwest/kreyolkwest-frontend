@@ -68,7 +68,7 @@ html, body {
   }
 
   input, textarea, select, button {
-    background-color: rgb(227, 194, 121) !important;
+    background-color: rgb(255, 255, 255) !important;
     color: rgb(255, 218, 179) !important;
     border: 1px solid #ccc;
   }
