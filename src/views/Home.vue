@@ -32,8 +32,13 @@
         class="card"
         @click="handleCardClick(item)"
       >
-        <img :src="item.images[0]" :alt="item.nom" v-if="item.images?.length" />
-        <h3>{{ item.nom }}</h3>
+      <img 
+    :src="item.images[0]" 
+    :alt="item.nom" 
+    @error="handleImageError($event, item)"
+    v-if="item.images?.length" 
+  />
+  <h3>{{ item.nom }}</h3>
       </div>
     </div>
 
@@ -167,6 +172,18 @@ onMounted(async () => {
     console.error('Erreur lors du chargement des données', err)
   }
 })
+
+const handleImageError = (event, item) => {
+  // Try to load the second image if available
+  if (item.images && item.images.length > 1) {
+    event.target.src = item.images[1]
+  } else {
+    // If no second image, load a default placeholder
+    event.target.src = '/placeholder-image.png' // Create this placeholder image in your public folder
+  }
+}
+
+
 </script>
 
 <style scoped>
