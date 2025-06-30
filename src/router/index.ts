@@ -61,7 +61,20 @@ const routes = [
       path: '/',
       name: 'EnConstruction',
       component: () => import('../views/EnConstruction.vue')
-    }
+    },
+    {path: '/CGU',
+    name: 'CGU',
+    component: () => import('../views/CGU.vue')},
+    {path: '/confidentialite',
+    name: 'Confidentialite',
+    component: () => import('../views/Confidentialite.vue')},
+    {path: '/accessibilite',
+    name: 'Accessibilite',
+    component: () => import('../views/Accessibilite.vue')},
+    {path: '/conseil',
+    name: 'Conseil',
+    component: () => import('../views/Conseils.vue')},
+    
 ];
 
 const router = createRouter({

@@ -89,8 +89,14 @@ onUnmounted(() => {
 
 // Sélectionner une catégorie avec surbrillance et filtre local
 const selectCategory = (category: { route: string; filter: string }) => {
-  selectedCategory.value = category.filter
-  emit('categorie-selectionnee', category.filter)
+  // Si on clique à nouveau sur la catégorie déjà sélectionnée, on la désélectionne
+  if (selectedCategory.value === category.filter) {
+    selectedCategory.value = null; // réinitialise la sélection
+    emit('categorie-selectionnee', null); // envoie null pour tout afficher
+  } else {
+    selectedCategory.value = category.filter;
+    emit('categorie-selectionnee', category.filter);
+  }
 };
 </script>
 

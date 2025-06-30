@@ -12,7 +12,8 @@
     <p><strong>Âge minimum :</strong> {{ activity.ageMinimum }} ans</p>
     <p><strong>Prix :</strong> {{ activity.prix }}</p>
 
-    <button @click="showPopup = true">Réserver</button>
+    <button v-if="activity.utiliseLienExterne" @click="redirectToLienExterne">Réserver</button>
+    <button v-else @click="showPopup = true"> Réserver </button>
 
     <!-- ✅ Popup réservation -->
     <div class="popup-overlay" v-if="showPopup">
@@ -117,8 +118,10 @@ onMounted(async () => {
     const id = route.params.id
     const res = await api.get(`/api/activities/${id}`)
     activity.value = res.data
+    console.log('🟢 Donnée activité reçue :', activity.value) 
   } catch (err) {
     console.error('Erreur chargement activité', err)
+    
   }
 })
 
@@ -161,6 +164,18 @@ const submitReservation = async () => {
     message.value = ''
   }
 }
+
+
+const redirectToLienExterne = () => {
+  if (activity.value?.lienReservation) {
+    window.open(activity.value.lienReservation, '_blank')
+  } else {
+    console.warn('Aucun lien externe de réservation défini.')
+  }
+}
+
+
+
 </script>
 
 <style scoped>

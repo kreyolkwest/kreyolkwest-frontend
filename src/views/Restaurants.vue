@@ -9,8 +9,10 @@
     <p><strong>Jours d'ouverture :</strong> {{ restaurant.joursOuverture?.join(', ') }}</p>
     <p><strong>Téléphone :</strong> {{ restaurant.telephone }}</p>
 
-    <button @click="showPopup = true">Réserver</button>
+    <button v-if="restaurant.utiliseLienExterne" @click="redirectToLienExterne">Réserver</button>
+    <button v-else @click="showPopup = true">Réserver</button>
 
+    
     <!-- ✅ Popup réservation -->
     <div class="popup-overlay" v-if="showPopup">
       <div class="popup">
@@ -144,6 +146,14 @@ const submitReservation = async () => {
   }
   console.log(nbPersonnes.value)
   goTo('/reservations')
+}
+
+const redirectToLienExterne = () => {
+  if (restaurant.value?.lienExterne) {
+    window.open(restaurant.value.lienExterne, '_blank')
+  } else {
+    console.warn('Aucun lien externe de réservation défini.')
+  }
 }
 </script>
 

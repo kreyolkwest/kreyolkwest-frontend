@@ -5,10 +5,13 @@
     <div class="body-content">
       <router-view />
     </div>
+
   </div>
+  <FooterGlobal />
 </template>
 
 <script setup lang="ts">
+import FooterGlobal from './components/FooterGlobal.vue'
 //import { computed } from 'vue';
 //import { useRoute } from 'vue-router';
 
@@ -16,7 +19,13 @@
 
 //const route = useRoute();
 //const _isHomePage = computed(() => route.path === '/');
+
+
+// rajouter dans #app dans style cette ligne pour le fond crème
+// background-color:rgb(255, 218, 179);
 </script>
+
+
 
 <style>
 #app {
@@ -25,8 +34,21 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0;
-  background-color:rgb(255, 218, 179);
+  background-color:rgb(243, 243, 243);
 }
+.footer-global {
+  width: 100vw;
+  background-color: #e87c3f;
+  color: white;
+  padding: 20px 0;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  box-sizing: border-box;
+}
+
 
 /* Empêche le scroll horizontal */
 html, body {
