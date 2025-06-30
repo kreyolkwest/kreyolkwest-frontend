@@ -452,7 +452,7 @@ nav.navbar {
   }
 
   .sticky-categories {
-    top: 70px;
+    top: 85px;
     padding: 10px;
   }
 
